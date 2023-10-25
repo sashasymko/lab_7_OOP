@@ -2,9 +2,9 @@ package ua.edu.ucu.apps.flowerstore;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
-import ua.edu.ucu.apps.flowerstore.Payment.CreditCardPaymentStrategy;
-import ua.edu.ucu.apps.flowerstore.Payment.PayPalPaymentStrategy;
-import ua.edu.ucu.apps.flowerstore.Payment.Payment;
+import ua.edu.ucu.apps.flowerstore.payment.CreditCardPaymentStrategy;
+import ua.edu.ucu.apps.flowerstore.payment.PayPalPaymentStrategy;
+import ua.edu.ucu.apps.flowerstore.payment.Payment;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
 

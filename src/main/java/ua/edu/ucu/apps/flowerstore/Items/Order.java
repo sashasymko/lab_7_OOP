@@ -1,36 +1,37 @@
 
-package ua.edu.ucu.apps.flowerstore.Items;
-import ua.edu.ucu.apps.flowerstore.Payment.Payment;
-import ua.edu.ucu.apps.flowerstore.Delivery.Delivery;
+package ua.edu.ucu.apps.flowerstore.items;
+import ua.edu.ucu.apps.flowerstore.delivery.Delivery;
+import ua.edu.ucu.apps.flowerstore.payment.Payment;
+
 import java.util.ArrayList;
 public class Order {
-    private Payment payment;
-    private Delivery delivery;
+    private Payment wayofpayment;
+    private Delivery wayofdelivery;
 
-    private final ArrayList<Item> my_lst;
+    private final ArrayList<Item> myLst;
 
     public Order() {
-        my_lst = new ArrayList<>();
+        myLst = new ArrayList<>();
     }
-    public void setPaymentMethod(Payment payment) {
-        this.payment = payment;
+    public void setPaymentMethod(Payment wayofpayment) {
+        this.wayofpayment = wayofpayment;
     }
-    public void setDeliverStrategy(Delivery delivery) {
-        this.delivery = delivery;
+    public void setDeliverStrategy(Delivery wayofdelivery) {
+        this.wayofdelivery = wayofdelivery;
     }
-    public double CountPrice() {
-        return my_lst.stream().mapToDouble(Item::price).sum();
+    public double countPrice() {
+        return myLst.stream().mapToDouble(Item::price).sum();
     }
     public void processingOrder() {
-        if (payment.pay(CountPrice())) {
+        if (wayofpayment.pay(countPrice())) {
             System.out.println("Payment is done");
-            delivery.delivery();
+            wayofdelivery.delivery();
         }
     }
     public void addItem(Item item) {
-        my_lst.add(item);
+        myLst.add(item);
     }
     public void deleteItem(Item item) {
-        my_lst.remove(item);
+        myLst.remove(item);
     }
 }

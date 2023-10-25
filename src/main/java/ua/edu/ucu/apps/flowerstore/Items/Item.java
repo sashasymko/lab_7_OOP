@@ -1,13 +1,13 @@
-package ua.edu.ucu.apps.flowerstore.Items;
+package ua.edu.ucu.apps.flowerstore.items;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 @AllArgsConstructor
 @NoArgsConstructor
-@Getter
+@Getter @Setter
 public abstract class Item {
-    protected String description;
+    private String description;
 
     public abstract double price();
 }
