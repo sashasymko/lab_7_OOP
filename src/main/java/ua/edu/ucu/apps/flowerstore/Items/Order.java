@@ -19,11 +19,11 @@ public class Order {
     public void setDeliverStrategy(Delivery chosenDelivery) {
         this.delivery = chosenDelivery;
     }
-    public double CountPrice() {
+    public double countPrice() {
         return myLst.stream().mapToDouble(Item::price).sum();
     }
     public void processingOrder() {
-        if (payment.pay(CountPrice())) {
+        if (payment.pay(countPrice())) {
             System.out.println("Payment is done");
             delivery.delivery();
         }
