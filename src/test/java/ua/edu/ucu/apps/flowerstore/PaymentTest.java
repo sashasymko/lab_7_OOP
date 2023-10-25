@@ -1,12 +1,11 @@
 package ua.edu.ucu.apps.flowerstore;
+
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
 import ua.edu.ucu.apps.flowerstore.payment.CreditCardPaymentStrategy;
 import ua.edu.ucu.apps.flowerstore.payment.PayPalPaymentStrategy;
 import ua.edu.ucu.apps.flowerstore.payment.Payment;
-
-import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class PaymentStrategyTests {
 
@@ -21,12 +20,14 @@ class PaymentStrategyTests {
     }
 
     @Test
-    void whenPaidByCreditCard_thenSuccessful() {
-        assertTrue(creditCardPaymentMethod.pay(TRANSACTION_AMOUNT), "Payment by credit card failed.");
+    void whenPaidByCreditCard() {
+        boolean paidByCard = creditCardPaymentMethod.pay(TRANSACTION_AMOUNT);
+        assert (paidByCard) : "Payment by credit card failed.";
     }
 
     @Test
-    void whenPaidByPayPal_thenSuccessful() {
-        assertTrue(payPalPaymentMethod.pay(TRANSACTION_AMOUNT), "Payment by PayPal failed.");
+    void whenPaidByPayPal() {
+        boolean paidByPayPal = payPalPaymentMethod.pay(TRANSACTION_AMOUNT);
+        assert (paidByPayPal) : "Payment by PayPal failed.";
     }
 }
