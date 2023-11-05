@@ -7,7 +7,7 @@ import ua.edu.ucu.apps.flowerstore.payment.CreditCardPaymentStrategy;
 import ua.edu.ucu.apps.flowerstore.payment.PayPalPaymentStrategy;
 import ua.edu.ucu.apps.flowerstore.payment.Payment;
 
-class PaymentStrategyTests {
+class PaymentTest { 
 
     private static Payment creditCardPaymentMethod;
     private static Payment payPalPaymentMethod;
@@ -21,13 +21,15 @@ class PaymentStrategyTests {
 
     @Test
     void whenPaidByCreditCard() {
-        boolean paidByCard = creditCardPaymentMethod.pay(TRANSACTION_AMOUNT);
+        boolean paidByCard = 
+        creditCardPaymentMethod.pay(TRANSACTION_AMOUNT);
         assert (paidByCard) : "Payment by credit card failed.";
     }
 
     @Test
     void whenPaidByPayPal() {
-        boolean paidByPayPal = payPalPaymentMethod.pay(TRANSACTION_AMOUNT);
+        boolean paidByPayPal =
+        payPalPaymentMethod.pay(TRANSACTION_AMOUNT);
         assert (paidByPayPal) : "Payment by PayPal failed.";
     }
 }
