@@ -1,4 +1,4 @@
-package ua.edu.ucu.apps.flowerstore.items;
+package ua.edu.ucu.apps.flowerstore.Items;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
