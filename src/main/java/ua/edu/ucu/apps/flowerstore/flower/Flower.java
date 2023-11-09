@@ -5,14 +5,11 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import ua.edu.ucu.apps.flowerstore.items.Item;
 import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
-import jakarta.persistence.Table;
 
-
-@Getter @Setter @AllArgsConstructor @Entity @Table @NoArgsConstructor
+@Getter @Setter @AllArgsConstructor @Entity @NoArgsConstructor
 public class Flower extends Item {
-    @GeneratedValue @Id
+    @Id
     private int id;
     private double sepalLength;
     private FlowerColor color;
