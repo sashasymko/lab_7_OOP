@@ -1,5 +1,6 @@
-
 package ua.edu.ucu.apps.flowerstore.items;
+
+import ua.edu.ucu.apps.flowerstore.Items.Item;
 import ua.edu.ucu.apps.flowerstore.delivery.Delivery;
 import ua.edu.ucu.apps.flowerstore.payment.Payment;
 
