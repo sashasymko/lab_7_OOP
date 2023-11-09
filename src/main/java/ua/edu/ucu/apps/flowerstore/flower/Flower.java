@@ -3,7 +3,7 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import ua.edu.ucu.apps.flowerstore.items.Item;
+import ua.edu.ucu.apps.flowerstore.Items.Item;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 
