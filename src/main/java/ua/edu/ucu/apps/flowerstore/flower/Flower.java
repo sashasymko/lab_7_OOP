@@ -15,7 +15,7 @@ public class Flower extends Item {
     @GeneratedValue @Id
     private int id;
     private double sepalLength;
-    private String color;
+    private FlowerColor color;
     protected double price;
 
     public Flower(FlowerColor color, double sepalLength, double price) {
@@ -23,15 +23,8 @@ public class Flower extends Item {
         this.sepalLength = sepalLength;
         this.price = price;
     }
-
-    private void setColor(FlowerColor color) {
-        this.color = color.toString();
-    }
-
     @Override
     public double price() {
         return price;
     }
-
-
 }
