@@ -1,4 +1,4 @@
-package ua.edu.ucu.apps.flowerstore.delivery;
+package ua.edu.ucu.apps.flowerstore.Delivery;
 
 public interface Delivery {
     void delivery();

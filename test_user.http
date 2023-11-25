@@ -1,0 +1,10 @@
+GET http://localhost:8080/api/user/list
+
+###
+POST http://localhost:8080/api/user/add
+Content-Type: application/json
+
+{
+  "email": "symko.pn@ucu.edu.ua",
+  "dob": "2004-02-12"
+}
